@@ -12,13 +12,4 @@ class Dataofapi {
     age = json['age'];
     colour = json['colour'];
   }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['_id'] = sId;
-    data['name'] = name;
-    data['age'] = age;
-    data['colour'] = colour;
-    return data;
-  }
 }

@@ -1,4 +1,4 @@
-import 'package:api/screens/homescreen.dart';
+import 'package:api/screens/detailScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const homescreen(),
+      home: const addPostScreen(),
     );
   }
 }

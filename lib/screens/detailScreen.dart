@@ -42,9 +42,7 @@ class _addPostScreenState extends State<addPostScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           postData();
-          setState(() {
-            
-          });
+          setState(() {});
         },
         child: const Icon(Icons.add),
       ),
