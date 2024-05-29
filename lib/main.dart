@@ -1,8 +1,10 @@
+import 'package:api/models/fuctions/fuctions.dart';
 import 'package:api/screens/detailScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+  print(getApi());
 }
 
 class MyApp extends StatelessWidget {

@@ -22,26 +22,25 @@ class _addPostScreenState extends State<addPostScreen> {
       body: FutureBuilder(
           future: getApi(),
           builder: (context, snapShort) {
-            if (snapShort.hasData) {
-              return ListView.builder(
-                  itemCount: snapShort.data?.length ?? 0,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                        title: Text(snapShort.data?[index].name.toString() ??
-                            "there is no title"),
-                        subtitle: Text(
-                            snapShort.data?[index].colour.toString() ??
-                                "there is no title"));
-                  });
-            } else {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
+            // if (snapShort.hasData) {
+            return ListView.builder(
+                itemCount: snapShort.data?.length ?? 0,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                      title: Text(snapShort.data?[index].name.toString() ??
+                          "there is no title"),
+                      subtitle: Text(snapShort.data?[index].colour.toString() ??
+                          "there is no title"));
+                });
+            // } else {
+            //   return const Center(
+            //     child: CircularProgressIndicator(),
+            //   );
           }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           postData();
+          
           setState(() {});
         },
         child: const Icon(Icons.add),
